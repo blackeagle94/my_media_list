@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="MyBookList/bootstrap.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>MyBookList</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="display-4 text-center">
+          <i class="fas fa-book-open text-primary"></i> My<span class="text-primary">Media</span>List</h1>
+          <form id="book-form">
+            <div class="form-group">
+              <label for="mediaTypeSelect">Media Type</label>
+              <select class="form-control" id="mediaTypeSelect">
+                <option id="book" value="Book">Book</option>
+                <option id="movie" value="Movie" >Movie</option>
+                <option id="cd" value="CD" >CD</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="title">Title</label>
+              <input type="text" id="title" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="author">Author</label>
+              <input type="text" id="author" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="pNum">Duration/page number</label>
+              <input type="text" id="pNum" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="typeOfMedia">Type of Media</label>
+              <input type="text" id="typeOfMedia" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="rating">Rating</label>
+              <input type="number" id="rating" class="form-control">
+            </div>
+            <input type="submit" value="Add Media" class="btn btn-primary btn-block">
+          </form>
+          <table class="table table-striped mt-5">
+            <thead>
+              <tr>
+                <th>Media Type</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Duration/page number</th>
+                <th>Type of Media</th>
+                <th>Rating</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="book-list"></tbody>
+          </table>
+      </div>
+    <script src="script.js"></script>
+</body>
+</html>
