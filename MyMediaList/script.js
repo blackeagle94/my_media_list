@@ -139,6 +139,7 @@ class Book {
     UI.deleteBook(e.target);
   
     // Remove book from store
+    console.log(e.target.parentElement.previousElementSibling.textContent) 
     Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
   
     // Show success message
