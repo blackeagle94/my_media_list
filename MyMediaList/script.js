@@ -87,11 +87,11 @@ class Book {
       const books = JSON.parse(localStorage.getItem('books'));
   
       for (let i = 0; i < books.length; i++) {
-        if (books[i] == pNum) {
+        if (books[i].rating == pNum) {
           books.splice(i, 1)
         }
       }
-  
+
       localStorage.setItem('books', JSON.stringify(books));
     }
   }
